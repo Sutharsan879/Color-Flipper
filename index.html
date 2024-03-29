@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-Flipper</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Background color : <span class="color"></span></h1>
+        <button id="btn">Click Here..</button>
+    </div>
+
+    <script>
+        const Array=["Red","Green","Yellow","Orange","Blue","Gray","Aqua","Pink","Black","SkyBlue","LiteGray"];
+        const btn=document.getElementById("btn");
+        const result=document.querySelector(".color");
+        btn.addEventListener("click",function(){
+            const randomnumber=getRandomNumber();
+            document.body.style.backgroundColor=Array[randomnumber];
+            result.innerHTML=Array[randomnumber];
+        })
+        function getRandomNumber()
+        {
+            return Math.floor(Math.random()*Array.length);
+        }
+    </script>
+</body>
+</html>
